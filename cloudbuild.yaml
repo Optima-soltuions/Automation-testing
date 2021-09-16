@@ -14,10 +14,5 @@ steps:
     - 'RELEASE_NAME=${_RELEASE}'
     - 'TESTSET_NAME=${_TESTSET}'
     - 'GRID_URL=${_GRIDURL}'   
-# Store the Test Results in cloud storage      
-artifacts:
-  objects:
-    location: 'gs://testautomationbuildartifacts/ExecutionResults'
-    paths: ['Results/Latest/*.txt','Results/Latest/summary.html']  
 images:
  - 'gcr.io/$PROJECT_ID/testautomation'
